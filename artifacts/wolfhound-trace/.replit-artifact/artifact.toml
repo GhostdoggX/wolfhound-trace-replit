@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Wolfhound Trace"
+version = "1.0.0"
+id = "artifacts/wolfhound-trace"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24909
+
+[services.development]
+run = "pnpm --filter @workspace/wolfhound-trace run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/wolfhound-trace", "run", "build" ]
+publicDir = "artifacts/wolfhound-trace/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24909"
+BASE_PATH = "/"

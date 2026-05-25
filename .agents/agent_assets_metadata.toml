@@ -1,0 +1,13 @@
+uploads = []
+
+[[generated]]
+id = "Xu7H0--3lu41b8O0AQf9F"
+uri = "file://artifacts/wolfhound-trace-mobile/assets/images/icon.png"
+type = "image"
+title = "wolfhound trace app icon"
+
+[[outputs]]
+id = "2ja4N5dvicel9V2JZmrGW"
+uri = "file://wolfhound-trace-deploy.zip"
+type = "unspecified"
+title = "wolfhound-trace-deploy.zip"
