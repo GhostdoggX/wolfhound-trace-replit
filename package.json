@@ -2,10 +2,10 @@
   "name": "workspace",
   "version": "0.0.0",
   "license": "MIT",
- "private": true,
-  "packageManager": "pnpm@11.3.0",
+  "private": true,
+  "packageManager": "pnpm@11.0.0",
   "scripts": {
-     "preinstall": "echo 'Temporary: skipping pnpm enforcement for deployment'",
+    "preinstall": "node scripts/check-package-manager.cjs",
     "build": "pnpm run typecheck && pnpm -r --if-present run build",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
